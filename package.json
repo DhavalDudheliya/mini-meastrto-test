@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 8140",
-    "build": "cross-env NODE_OPTIONS=--max-old-space-size=1536; next build",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=1536; next build --no-lint",
     "build:local": "next build",
     "start": "next start",
     "lint": "next lint"
