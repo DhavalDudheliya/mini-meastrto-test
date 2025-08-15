@@ -1,0 +1,1240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+body {
+  background-color: #fffffc;
+  /* background-color: #FF3131; */
+}
+
+:root {
+  --purple: #8665ff;
+  --danger: #FF3131;
+
+  --green-50: #f7fae5;
+  --green: #bdda02;
+
+  --orange-50: #fde8c8;
+  --orange: #f5a326;
+
+  --yellow-50: #fefbe5;
+  --yellow: #fddd34;
+
+  --light-gray: #fbfbfb;
+  --light-gray-200: #e9e9e9;
+  --light-gray-300: #ededed;
+  --mid-gray: #f4f4f4;
+  --gray: #b9b9b9;
+  --gray-100: #bfbfbf;
+  --dark-gray: #5b5b5b;
+
+  --pink-100: #fde9f3;
+  --pink-200: #f9bdda;
+  --pink-300: #f490c1;
+  --pink-400: #f27ab5;
+  --pink-500: #fd44ac;
+  --pink-600: #ff25a0;
+
+
+  --blue-100: #ebf9fe;
+  --blue-200: #d0f4ff;
+  --blue-300: #8ae4ff;
+  --blue-400: #76e1fb;
+  --blue-500: #5ad6fc;
+  --blue-600: #00c3ff;
+}
+
+/* swiper arrow css */
+
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  color: var(--pink-200) !important;
+  font-size: 30px !important;
+}
+
+/* ====== scrollbar css start ======= */
+
+/* ===== danger color class ===== */
+
+.danger {
+  color: var(--danger);
+}
+
+.border-danger{
+  border-color: var(--danger) !important;
+}
+
+
+/* === swiper pagination css start === */
+
+span.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 40px;
+  background-color: var(--pink-300);
+  opacity: 1;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 40px;
+  background-color: var(--pink-400);
+}
+
+
+.swiper-sky-pagination span.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 40px;
+  background-color: var(--blue-300);
+  opacity: 1;
+}
+
+.swiper-sky-pagination .swiper-slide {
+  height: auto;
+  margin-bottom: 45px;
+  top: -16px;
+  margin-top: 16px;
+}
+
+.swiper-sky-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 40px;
+  background-color: var(--blue-500);
+}
+
+/* == scrollbar normal ==  */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  padding-left: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--mid-gray);
+  box-shadow: inset 0 0 5px var(--gray);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink-500);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink-600);
+}
+
+/* == scrollbar thin == */
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+/* == scrollbar hide == */
+
+.y-scroll-hidden::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.x-scroll-hidden::-webkit-scrollbar {
+  height: 0 !important;
+}
+
+.both-scroll-hidden::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* ====== scrollbar css end ======= */
+
+.swiper-wrapper {
+  flex-wrap: nowrap !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+}
+
+.container-full{
+  width: 100%;
+  padding: 0 16px;
+}
+
+.index-section {
+  margin: 30px 0;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+.product-h2 {
+  font-size: 40px;
+}
+
+.product-p {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  width: fit-content;
+  height: fit-content;
+  z-index: 100;
+}
+
+
+/* ===== pagination css ===== */
+
+
+.pagination-container a {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray-200);
+  color: var(--dark-gray);
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none; /* Remove underline */
+}
+
+li.pagination-item.active a {
+  background-color: var(--dark-gray);
+  color: var(--light-gray-200);
+}
+
+li.pagination-item.active.disabled a{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-container li a img{
+  width: 7px;
+}
+
+
+/* ====== pagination css end ====== */
+
+/* ============== btn outline css start ============ */
+
+/* btn outline pink */
+
+.btn.outline {
+  font-size: 16px;
+  font-weight: 430;
+  position: relative;
+  text-align: center;
+  padding: 15.5px 39.5px 15.5px 39.5px; /* Default padding for regular buttons */
+}
+
+.btn.outline.large-btn {
+  padding: 20.5px 46.5px 20.5px 46.5px; /* Corrected padding for large buttons */
+}
+
+.btn.outline.small-btn {
+  padding: 10px 39.5px 10px 39.5px; /* Corrected padding for small-btnall buttons */
+}
+
+.btn.outline.pink {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid var(--pink-500);
+}
+
+.btn.outline.pink::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../public/images/spash_pink_btn.png");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* small-btnooth transition effect */
+}
+
+.btn.outline.pink:hover {
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.btn.outline.pink:hover::before {
+  opacity: 1;
+}
+
+/* btn outline blue */
+
+.btn.outline.blue {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid var(--blue-500);
+}
+
+.btn.outline.blue::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../public/images/blue_btn_splash.png");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* small-btnooth transition effect */
+}
+
+.btn.outline.blue:hover {
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.btn.outline.blue:hover::before {
+  opacity: 1;
+}
+
+/* btn outline purple */
+
+.btn.outline.purple {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid var(--purple);
+}
+
+.btn.outline.purple::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../public/images/spash_purple_btn.png");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* small-btnooth transition effect */
+}
+
+.btn.outline.purple:hover {
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.btn.outline.purple:hover::before {
+  opacity: 1;
+}
+
+/* ============== btn outline css end ============ */
+
+/* ============== btn splash css start ============ */
+
+/* btn-splash pink */
+
+.btn-splash {
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  padding: 34px 66px 42px 56px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.btn-splash.medium-btn {
+  padding: 22px 54px 28px 46px;
+  font-size: 18px;
+}
+
+.btn-splash.small-btn {
+  font-size: 16px;
+  padding: 16px 42px 18px 33px;
+}
+
+.btn-splash.pink::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../public/images/spash_pink_btn.png");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+
+.btn-splash.pink:hover::before {
+  opacity: 1;
+}
+
+/* btn-splash blue */
+
+.btn-splash.blue::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../public/images/blue_btn_splash.png");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+
+.btn-splash.blue:hover::before {
+  opacity: 1;
+}
+
+/* btn-splash purple */
+
+.btn-splash.purple::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../public/images/spash_purple_btn.png");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+
+.btn-splash.purple:hover::before {
+  opacity: 1;
+}
+
+/* ============== btn splash css end ============ */
+
+/* =============== btn pill css start ============== */
+
+.btn-pill {
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  line-height: 1;
+  padding: 12px 22px;
+  border-radius: 20px;
+  text-align: center;
+  height: auto;
+  transition: all 0.5s linear;
+}
+.btn-pill2 {
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  line-height: 1;
+  padding: 12px 22px;
+  border-radius: 20px;
+  text-align: center;
+  height: auto;
+  transition: all 0.5s linear;
+}
+
+.btn-pill.outline-transparent {
+  border: 2px solid var(--gray);
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-pill.blue {
+  background-color: var(--blue-400);
+}
+
+.btn-pill.blue:hover {
+  background-color: var(--blue-600);
+}
+
+.btn-pill.pink {
+  background-color: var(--pink-500);
+}
+
+.btn-pill.pink:hover {
+  background-color: var(--pink-600);
+}
+
+.btn-pill.yellow {
+  color: #000;
+  background-color: #FFD000;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.btn-pill.yellow:hover {
+  color: #000;
+  background-color: #FBC700;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-pill2.yellow {
+  color: #000;
+  background-color: #FFD000;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-pill2.yellow:hover {
+  color: #000;
+  background-color: #FBC700;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* =============== btn pill css end ============== */
+
+/* ============== input and text area css start ============ */
+
+input,
+textarea {
+  height: 40px;
+  padding: 8px 22px;
+  line-height: 1.2;
+  outline: none;
+  border: 2px solid var(--gray);
+  font-size: 18px;
+  font-family: "Bariol Regular", sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  height: auto;
+}
+
+input {
+  border-radius: 100px;
+}
+
+input::-ms-input-placeholder {
+  /* Edge 12-18 */
+  font-family: "Bariol Regular", sans-serif;
+}
+
+input::placeholder {
+  font-family: "Bariol Regular", sans-serif;
+}
+
+textarea {
+  border-radius: 30px;
+}
+
+textarea::-ms-input-placeholder {
+  /* Edge 12-18 */
+  font-family: "Bariol Regular", sans-serif;
+}
+
+textarea::placeholder {
+  font-family: "Bariol Regular", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--pink-500);
+}
+
+input.blue {
+  border-color: #5ad6fcbb;
+}
+
+textarea.blue {
+  border-color: #5ad6fcbb;
+}
+
+input.blue:focus,
+textarea.blue:focus {
+  border-color: var(--blue-600);
+}
+
+/* radio btn css start */
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #000;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--pink-500);
+  border-radius: 100%;
+  background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: var(--pink-300);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* radio btn css end */
+
+
+/* ======= range css start ======= */
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  outline: none !important;
+  border: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  background-color: transparent !important;
+}
+/* Base Styles for Range Input */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  outline: none !important;
+  border: none !important;
+}
+
+/* WebKit (Chrome, Safari) */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px; /* Track height */
+  cursor: pointer;
+  background: var(--pink-300);
+  border-radius: 25px;
+  border: none;
+  margin-top: -1px; /* Adjust to center track */
+}
+
+/* Mozilla (Firefox) */
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px; /* Track height */
+  cursor: pointer;
+  background: var(--pink-300);
+  border-radius: 25px;
+  border: none;
+}
+
+/* Microsoft Edge and IE */
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px; /* Track height */
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: var(--pink-300);
+  border-radius: 25px;
+}
+
+/* Thumb Styles */
+
+/* WebKit (Chrome, Safari) */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px; /* Thumb height */
+  width: 20px;  /* Thumb width */
+  border-radius: 50%;
+  background: var(--pink-500);
+  cursor: pointer;
+  margin-top: -8.5px; /* Adjust to align thumb in the center of track */
+  box-shadow: 0 0 0px #000000, 0 0 0px #0d0d0d;
+}
+
+/* Mozilla (Firefox) */
+input[type=range]::-moz-range-thumb {
+  height: 20px; /* Thumb height */
+  width: 20px;  /* Thumb width */
+  border-radius: 50%;
+  background: var(--pink-500);
+  cursor: pointer;
+  margin-top: -8.5px; /* Adjust to align thumb in the center of track */
+  box-shadow: 0 0 0px #000000, 0 0 0px #0d0d0d;
+}
+
+/* Microsoft Edge and IE */
+input[type=range]::-ms-thumb {
+  height: 20px; /* Thumb height */
+  width: 20px;  /* Thumb width */
+  border-radius: 50%;
+  background: var(--pink-500);
+  cursor: pointer;
+  box-shadow: 0 0 0px #000000, 0 0 0px #0d0d0d;
+}
+
+/* Focus Styles */
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track,
+input[type=range]:focus::-moz-range-track,
+input[type=range]:focus::-ms-fill-lower,
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--pink-300);
+}
+
+
+
+/* ======= range css start ======= */
+
+
+/* status dropdown css start */
+
+.dropdown-list-wrapper {
+  position: relative;
+  width: max-content;
+}
+
+.dropdown-list {
+  position: absolute;
+  right: 0;
+  width: max-content;
+  background-color: var(--green-50);
+  padding: 0 16px;
+  padding-bottom: 20px;
+  border: transparent;
+  border-top-left-radius: 16px !important;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: block; /* Display controlled by React state */
+  z-index: 9;
+}
+
+.dropdown-down {
+  padding-top: 8px;
+  top: calc(100% - 10px); /* Position below the button */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.dropdown-up {
+  top: auto;
+  bottom: calc(100% - 10px);
+  padding-top: 20px;
+  padding-bottom: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.dropdown-list-wrapper:hover .dropdown-list {
+  display: block; /* Ensure dropdown opens on button click */
+}
+
+.dropdown-list-btn {
+  width: 132.3px;
+  padding: 13px 19px;
+}
+
+.dropdown-list-btn span {
+  font-size: 16px;
+}
+
+/* table dropdown css start */
+
+.admin-table .dropdown-list {
+  width: max-content !important;
+  padding-top: 16px;
+}
+
+.admin-table .dropdown-list span {
+  display: block;
+  line-height: inherit;
+}
+
+.admin-table .dropdown-list-btn span:first-child {
+  display: block;
+}
+
+.admin-table .dropdown-list-btn span:nth-child(2){
+  display: none !important;
+}
+
+/* table dropdown css end */
+
+/* status dropdown css end */
+
+/* ============== input and textarea css end ============ */
+
+/* ===================== header css start ========================= */
+
+.header-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 0 8px -3px #00000036;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 99999;
+  display: none;
+}
+
+.header-user:hover .header-dropdown {
+  display: block;
+}
+
+.header-dropdown-menu {
+  padding: 10px 20px;
+  transition: background-color 0.3s linear;
+}
+
+.header-dropdown-menu:hover {
+  background-color: var(--mid-gray);
+  color: var(--pink-500);
+}
+
+/* ===================== header css end ========================= */
+
+/* ======= hero section css start ======= */
+
+.hero-container {
+  height: 85vh;
+}
+
+/* ======= hero section css start ======= */
+
+
+/* ====== main product swiper css start ======= */
+
+.swiper-slide-thumb-active > div {
+  border-color: #3b82f6;
+}
+
+/* ====== main product swiper css end ======= */
+
+
+/* ==== custom dropdown css start ======== */
+
+table.admin-table .dropdown-list-btn {
+  width: max-content;
+}
+
+/* ==== custom dropdown css start ======== */
+
+
+@media screen and (max-width: 1600px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .btn.outline {
+    padding: 11.5px 25.5px 11.5px 21.5px;
+  }
+
+  .btn.outline.large-btn {
+    padding: 15.5px 38.5px 15.5px 38.5px;
+  }
+
+  .btn-splash {
+    padding: 14px 56px 22px 46px;
+    font-size: 22px;
+  }
+
+  .btn-splash.medium-btn {
+    padding: 17px 44px 21px 36px;
+    font-size: 16px;
+  }
+
+  /* ======= hero section css start ======= */
+
+  .hero-container {
+    height: auto;
+  }
+
+  /* ======= hero section css end ======= */
+}
+
+@media screen and (max-width: 1440px) {
+  .index-section {
+    margin: 40px 0;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .product-h2 {
+    font-size: 36px;
+  }
+
+  .product-p {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 24px;
+  }
+
+  h6 {
+    font-size: 22px;
+  }
+
+  .btn-splash.small-btn {
+    font-size: 15px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+    padding: 5px 10px;
+    height: 34px;
+  }
+
+  textarea {
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .btn-pill {
+    font-size: 16px;
+    padding: 8.6px 16px;
+  }
+
+  /* custom dropdown css start */
+
+  .dropdown-list-btn {
+    padding: 11px 14px;
+    border-radius: 8px;
+  }
+
+  .dropdown-list-btn span {
+    font-size: 14px;
+  }
+
+  .dropdown-list {
+    border-radius: 8px;
+  }
+
+  .dropdown-list > div {
+    gap: 8px;
+  }
+
+  .dropdown-list > div label{
+    font-size: 14px;
+  }
+
+  /* custom dropdown css end */
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .product-h2 {
+    font-size: 32px;
+  }
+
+  .product-p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .btn.outline.small-btn {
+    padding: 8px 18px 8px 18px;
+    font-size: 14px;
+  }
+
+  .btn-splash {
+    padding: 14px 50px 18px 37px;
+    font-size: 18px;
+  }
+
+  .btn-splash.medium-btn {
+    padding: 12px 33px 16px 26px;
+    font-size: 16px;
+  }
+
+  .btn-splash.small-btn {
+    font-size: 14px;
+    padding: 10px 36px 14px 22px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+
+  textarea {
+    height: auto;
+    border-radius: 20px;
+  }
+  /* 
+  .btn-pill {
+    font-size: 18px;
+    padding: 10px 16px;
+  } */
+
+  .dropdown-list-btn {
+    width: 120px !important;
+    padding: 11px 14px;
+    border-radius: 8px;
+  }
+
+  /* ===================== header css start ========================= */
+
+  .header-dropdown {
+    width: max-content;
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .product-h2 {
+    font-size: 28px;
+  }
+  
+  .product-p {
+    font-size: 16px;
+  } 
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+
+
+  .index-section {
+    margin: 30px 0;
+  }
+
+  /* header css */
+
+  .header-dropdown-menu {
+    padding: 10px 15px;
+  }
+
+  .header-btn{
+    display: none;
+  }
+
+  /* ======= hero section css start ======= */
+
+  .hero-container {
+    height: 100%;
+  }
+
+  /* ======= hero section css end ======= */
+
+  .dropdown-list{
+    padding: 0 8px;
+    padding-bottom: 10px;
+  }
+
+  .dropdown-list-btn {
+    width: max-content !important;
+    padding: 11px 14px;
+    border-radius: 8px;
+  }
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
