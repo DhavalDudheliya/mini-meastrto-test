@@ -1,5 +1,5 @@
 {
-  "extends": ["next/babel", "next/core-web-vitals"],
+  "extends": ["next/babel", "next/core-web-vitals", "next"],
   "rules": {
     // Consistently import navigation APIs from `@/i18n/routing`
     "no-restricted-imports": [
