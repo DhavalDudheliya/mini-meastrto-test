@@ -65,6 +65,9 @@
     "vite-plugin-node-polyfills": "^0.22.0",
     "yup": "^1.4.0"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
     "@types/node": "22.1.0",
