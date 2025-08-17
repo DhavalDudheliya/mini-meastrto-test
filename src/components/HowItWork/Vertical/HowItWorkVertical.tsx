@@ -49,7 +49,7 @@ const HowItWorkVertical = () => {
               <div className="flex flex-wrap md:flex-nowrap">
                 <div className="w-full lg:w-5/12 relative">
                   <Image
-                    src="/images/custom_photo_book_or_framed_wall_art.webp"
+                    src="/images/1_box.jpg"
                     width={569}
                     height={392}
                     alt="Custom photo book or framed wall art made from children's drawings"
@@ -80,7 +80,7 @@ const HowItWorkVertical = () => {
                 </div>
                 <div className="w-full lg:w-5/12 relative">
                   <Image
-                    src="/images/professional_photographer_capturing.webp"
+                    src="/images/2_Editing.jpg"
                     width={569}
                     height={392}
                     alt="Professional photographer capturing and editing children's drawings for a Mini Maestro photo book or framed wall art"
@@ -94,7 +94,7 @@ const HowItWorkVertical = () => {
               <div className="flex flex-wrap md:flex-nowrap">
                 <div className="w-full lg:w-5/12 relative">
                   <Image
-                    src="/images/parents_reviewing_Mini_Maestro_photo_book_proof.webp"
+                    src="/images/3_Approve.jpg"
                     width={569}
                     height={392}
                     alt="Parents reviewing Mini Maestro photo book proof before printing"
@@ -126,7 +126,7 @@ const HowItWorkVertical = () => {
                 </div>
                 <div className="w-full lg:w-5/12 relative">
                   <Image
-                    src="/images/smiling_child_holding_mini_maestro_art_book.webp"
+                    src="/images/4_Memories_preser.jpg"
                     width={569}
                     height={392}
                     alt="Smiling child holding completed Mini Maestro art book"

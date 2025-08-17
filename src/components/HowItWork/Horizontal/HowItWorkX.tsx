@@ -10,25 +10,25 @@ const HowItWorkX = ({ heading, locale }: { heading: string; locale: string }) =>
 
   const howItWork = [
     {
-      img: "/images/custom_photo_book_or_framed_wall_art.webp",
+      img: "/images/1_box.jpg",
       alt: "Custom photo book or framed wall art made from children's drawings",
       title: t("order_your_shipping_kit"),
       desc: t("order_your_shipping_kit_description"),
     },
     {
-      img: "/images/professional_photographer_capturing.webp",
+      img: "/images/2_Editing.jpg",
       alt: "Professional photographer capturing and editing children's drawings for a Mini Maestro photo book or framed wall art",
       title: t("our_designer_team_work_their_magic"),
       desc: t("our_designer_team_work_their_magic_description"),
     },
     {
-      img: "/images/parents_reviewing_Mini_Maestro_photo_book_proof.webp",
+      img: "/images/3_Approve.jpg",
       alt: "Parents reviewing Mini Maestro photo book proof before printing",
       title: t("review_your_proof_and_approve"),
       desc: t("review_your_proof_and_approve_description"),
     },
     {
-      img: "/images/smiling_child_holding_mini_maestro_art_book.webp",
+      img: "/images/4_Memories_preser.jpg",
       alt: "Smiling child holding completed Mini Maestro art book",
       title: t("treasured_memories_to_keep_forever"),
       desc: t("treasured_memories_to_keep_forever_description"),

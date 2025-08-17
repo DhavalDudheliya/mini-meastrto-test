@@ -36,16 +36,19 @@ const Hero: React.FC = () => {
     <header className="relative w-full bg-[#FEF7DA1A] md:min-h-[calc(100vh-80px)] h-[50vh] mt-[64px] md:mt-[80px] flex items-center justify-center">
       {/* Background Image */}
       <Image
-        src="/images/photo_book_of_child_drawing.webp"
+        src="/images/Hero_home_page.jpg"
         fill
         priority
         sizes="100vw"
         alt="photo book of child drawing"
-        className="absolute inset-0 w-full h-full object-cover object-[30%_20%] z-0"
+        className="absolute inset-0 w-full h-full object-cover object-[30%_35%] z-0"
       />
 
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
+
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl px-4 sm:px-6 lg:px-20 flex flex-col items-center justify-center gap-6 py-10">
+      <div className="relative z-20 text-center max-w-4xl px-4 sm:px-6 lg:px-20 flex flex-col items-center justify-center gap-6 py-10">
         {/* Desktop Text */}
         <h1 className="text-white font-bold md:block hidden md:text-[48px] lg:text-[64px] leading-snug">{t("hero_heading")}</h1>
         <h2 className="text-white font-bold md:block hidden md:text-[24px] lg:text-[36px] leading-snug">{t("hero_subheading")}</h2>
