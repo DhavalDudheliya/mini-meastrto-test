@@ -41,7 +41,7 @@ const OurProductCard = ({ name, slug, bullet_points, is_photo_book, is_wall_pain
             title={alt}
             width={500}
             height={300}
-            className="rounded-t-[16px] sm:rounded-t-[30px] h-[200px] w-[200px] sm:h-[200px]"
+            className="rounded-t-[16px] sm:rounded-t-[30px] h-[200px] w-[200px] md:h-[300px] md:w-[300px] lg:h-full lg:w-full object-cover"
           />
         </div>
 
