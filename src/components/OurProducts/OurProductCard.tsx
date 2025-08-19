@@ -34,29 +34,26 @@ const OurProductCard = ({ name, slug, bullet_points, is_photo_book, is_wall_pain
         role="link"
       >
         {/* Product Image */}
-        <figure className="rounded-[16px] overflow-hidden sm:rounded-[30px]">
+        <div className="w-full mx-auto flex justify-center items-center">
           <Image
             src={src || ""}
             alt={alt}
             title={alt}
-            priority
-            sizes="100vw"
-            className="object-cover h-auto sm:w-[300px] sm:h-[280px] lg:w-[350px] lg:h-[326px]"
-            width={390}
-            height={390}
+            width={500}
+            height={300}
+            className="rounded-t-[16px] sm:rounded-t-[30px] h-[200px] w-[200px] sm:h-[200px]"
           />
-          <figcaption className="sr-only">{alt}</figcaption>
-        </figure>
+        </div>
 
         {/* Product Info */}
         <div className="flex flex-col gap-6 items-center text-center">
-          <h3 className="font-bold text-4xl">{name[locale]}</h3>
+          <h3 className="font-bold text-3xl sm:text-3xl md:text-4xl">{name[locale]}</h3>
 
           {/* Bullet Points */}
           {(is_photo_book || is_wall_painting) && bullet_points?.[locale]?.length > 0 && (
-            <ul className="list-disc list-inside text-gray-700 text-[16px] space-y-1 font-medium text-center md:text-start">
+            <ul className="list-disc list-outside pl-4 text-gray-700 text-sm sm:text-base md:text-lg space-y-1 font-medium text-start flex flex-col items-start justify-center mx-4">
               {bullet_points[locale].map((point, idx) => (
-                <li key={idx}>{point} </li>
+                <li key={idx}>{point}</li>
               ))}
             </ul>
           )}

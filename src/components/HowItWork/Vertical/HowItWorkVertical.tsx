@@ -47,13 +47,13 @@ const HowItWorkVertical = () => {
           <div className="mt-[40px] sm:mt-[45px] lg:mt-[55px]">
             <div className="flex flex-col gap-[30px] md:[gap-40px] lg:gap-[50px] xl:gap-[90px] 2xl:gap-[112px]">
               <div className="flex flex-wrap md:flex-nowrap">
-                <div className="w-full lg:w-5/12 relative">
+                <div className="w-full lg:w-5/12 relative flex justify-center">
                   <Image
                     src="/images/1_box.jpg"
                     width={569}
                     height={392}
                     alt="Custom photo book or framed wall art made from children's drawings"
-                    className="w-full h-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
+                    className="h-[300px] w-[300px] md:h-full md:w-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
                   />
                   <div className="w-12 h-12 flex justify-center items-center absolute left-1/2 bottom-[-22px] -translate-x-1/2 md:left-[unset] md:bottom-[unset] md:-right-[48px] md:top-1/2 md:-translate-y-1/2 rounded-full bg-[#FF77C3] text-black">
                     <h5>1</h5>
@@ -78,13 +78,13 @@ const HowItWorkVertical = () => {
                     {/* <p className="btn-splash pink medium-btn">Book Now</p> */}
                   </div>
                 </div>
-                <div className="w-full lg:w-5/12 relative">
+                <div className="w-full lg:w-5/12 relative flex justify-center">
                   <Image
                     src="/images/2_Editing.jpg"
                     width={569}
                     height={392}
                     alt="Professional photographer capturing and editing children's drawings for a Mini Maestro photo book or framed wall art"
-                    className="w-full h-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
+                    className="h-[300px] w-[300px] md:h-full md:w-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
                   />
                   <div className="w-12 h-12 flex justify-center items-center left-1/2 bottom-[-22px] -translate-x-1/2 absolute md:-right-[unset] md:top-[50%] md:left-[0] md:-translate-y-1/2 rounded-full bg-[#FF77C3] text-black">
                     <h5>2</h5>
@@ -92,13 +92,13 @@ const HowItWorkVertical = () => {
                 </div>
               </div>
               <div className="flex flex-wrap md:flex-nowrap">
-                <div className="w-full lg:w-5/12 relative">
+                <div className="w-full lg:w-5/12 relative flex justify-center">
                   <Image
                     src="/images/3_Approve.jpg"
                     width={569}
                     height={392}
                     alt="Parents reviewing Mini Maestro photo book proof before printing"
-                    className="w-full h-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
+                    className="h-[300px] w-[300px] md:h-full md:w-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
                   />
                   <div className="w-12 h-12 flex justify-center items-center absolute left-1/2 bottom-[-22px] -translate-x-1/2 md:left-[unset] md:bottom-[unset] md:-right-[48px] md:top-1/2 md:-translate-y-1/2 rounded-full bg-[#FF77C3] text-black">
                     <h5>3</h5>
@@ -124,13 +124,13 @@ const HowItWorkVertical = () => {
                     {/* <p className="btn-splash pink medium-btn">Book Now</p> */}
                   </div>
                 </div>
-                <div className="w-full lg:w-5/12 relative">
+                <div className="w-full lg:w-5/12 relative flex justify-center">
                   <Image
                     src="/images/4_Memories_preser.jpg"
                     width={569}
                     height={392}
                     alt="Smiling child holding completed Mini Maestro art book"
-                    className="w-full h-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
+                    className="h-[300px] w-[300px] md:h-full md:w-full rounded-[16px] lg:rounded-[20px] xl:rounded-[30px]"
                   />
                   <div className="w-12 h-12 flex justify-center items-center left-1/2 bottom-[-22px] -translate-x-1/2 absolute md:-right-[unset] md:top-[50%] md:left-[0] md:-translate-y-1/2 rounded-full bg-[#FF77C3] text-black">
                     <h5>4</h5>

@@ -47,7 +47,7 @@ const AboutOurProduct = () => {
         </div>
         <div className="mt-[30px] sm:mt-[40px] lg:mt-[55px] flex flex-col gap-16 max-w-[1500px] mx-auto py-10">
           {products.map((product, index) => (
-            <div className={`flex px-10 flex-col ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+            <div className={`flex px-6 md:px-0 flex-col ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
               <div
                 key={index}
                 id={product.slug[local]}
@@ -67,7 +67,7 @@ const AboutOurProduct = () => {
                   <h3 className="text-2xl md:text-3xl font-bold">{product.name[local]}</h3>
                   <p className="text-gray-700 leading-relaxed">{product.description}</p>
                   <p className="text-gray-700 leading-relaxed">{product.description2}</p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-1 mb-10">
+                  <ul className="list-disc list-outside text-gray-700 space-y-1 mb-10 ml-4">
                     {product.bullets.map((bullet, idx) => (
                       <li key={idx}>{bullet}</li>
                     ))}
@@ -77,7 +77,7 @@ const AboutOurProduct = () => {
                       pathname: "/product/[product-slug]",
                       params: { "product-slug": product.slug[local] },
                     }}
-                    className="btn-pill2 yellow small-btn absolute -bottom-5 left-1/2 transform -translate-x-1/2 hover:translate-y-[-2px] transition-transform duration-300"
+                    className="btn-pill2 yellow small-btn absolute -bottom-5 left-1/2 transform -translate-x-1/2 hover:translate-y-[-2px] hover:transition-all hover:duration-300 min-w-40"
                   >
                     {t("order_now")}
                   </Link>

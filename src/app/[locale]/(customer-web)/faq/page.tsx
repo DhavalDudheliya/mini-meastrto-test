@@ -64,7 +64,7 @@ const FAQPage = ({ params }: { params: { locale: Locale } }) => {
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-10 mt-[60px] md:mt-[80px]">
-      <h1 className="text-3xl font-bold text-center mb-8">FAQ</h1>
+      <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold text-center mb-8">FAQ</h1>
 
       {/* JSON-LD for SEO */}
       <script
@@ -171,7 +171,7 @@ const faqData: FAQCategory[] = [
         {
           question: "What does the process look like?",
           answer: (
-            <ul className="list-decimal list-inside">
+            <ul className="list-decimal list-outside pl-6">
               <li>Place your order – Choose a photo book or wall art.</li>
               <li>Receive your box – We send you a beautifully designed Mini Maestro box.</li>
               <li>Send us the artwork – Place your child’s drawings in the box and return it to us using the prepaid shipping label.</li>
@@ -192,7 +192,7 @@ const faqData: FAQCategory[] = [
           answer: (
             <div>
               <p>Once we receive your drawings, the process typically takes:</p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-outside pl-6">
                 <li>2–4 days for photographing and editing</li>
                 <li>5–7 days for production (printing your photo book or wall art)</li>
                 <li>3–4 days for delivery</li>
@@ -231,7 +231,7 @@ const faqData: FAQCategory[] = [
           answer: (
             <div>
               <p>Your purchase includes everything needed to create your personalized product:</p>
-              <ul className="list-none list-inside">
+              <ul className="list-none list-outside pl-2">
                 <li>– A beautifully designed Mini Maestro collection box sent to your home</li>
                 <li>– Prepaid return shipping of your child’s artwork</li>
                 <li>– Professional digitization and editing of each drawing</li>
@@ -302,7 +302,7 @@ const faqData: FAQCategory[] = [
         {
           question: "Hur ser processen ut?",
           answer: (
-            <ul className="list-decimal list-inside">
+            <ul className="list-decimal list-outside pl-6">
               <li>Lägg din beställning – Välj fotobok eller väggkonst.</li>
               <li>Ta emot din box – Vi skickar en vackert designad Mini Maestro-box till dig.</li>
               <li>Skicka in konstverken – Lägg ditt barns teckningar i boxen och returnera den till oss med den förbetalda fraktsedeln.</li>
@@ -323,7 +323,7 @@ const faqData: FAQCategory[] = [
           answer: (
             <div>
               <p>När vi har fått dina teckningar tar processen vanligtvis:</p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-outside pl-6 ">
                 <li>2–4 dagar för fotografering och redigering</li>
                 <li>5–7 dagar för produktion (tryckning av din fotobok eller väggkonst)</li>
                 <li>3–4 dagar för leverans</li>
@@ -362,7 +362,7 @@ const faqData: FAQCategory[] = [
           answer: (
             <div>
               <p>Din beställning inkluderar allt som behövs för att skapa din personliga produkt:</p>
-              <ul className="list-none list-inside">
+              <ul className="list-none list-outside pl-2">
                 <li>– En vackert designad Mini Maestro-samlingsbox skickad hem till dig</li>
                 <li>– Förbetald returfrakt av ditt barns konstverk</li>
                 <li>– Professionell digitalisering och redigering av varje teckning</li>
@@ -440,7 +440,7 @@ const faqData: FAQCategory[] = [
           answer: (
             <div>
               <p>We currently offer two size options:</p>
-              <ul className="list-none list-inside">
+              <ul className="list-none list-outside pl-2">
                 <li>– 20 x 20 cm – a perfect square format</li>
                 <li>– 30 x 40 cm – a classic portrait layout</li>
               </ul>
@@ -509,7 +509,7 @@ const faqData: FAQCategory[] = [
           answer: (
             <div>
               <p>Vi erbjuder för närvarande två storleksalternativ:</p>
-              <ul className="list-none list-inside">
+              <ul className="list-none list-outside pl-2">
                 <li>– 20 x 20 cm – ett perfekt kvadratiskt format</li>
                 <li>– 30 x 40 cm – ett klassiskt porträttformat</li>
               </ul>

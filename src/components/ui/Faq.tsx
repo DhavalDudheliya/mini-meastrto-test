@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
@@ -16,13 +17,9 @@ const Faq = () => {
       <div className="flex flex-col items-center text-center mb-10">
         <h2 className="text-3xl md:text-6xl font-bold">{t("explore_faqs")}</h2>
         <p className="mt-2 text-lg">{t("answers_to_what_everyones_asking")}</p>
-        <button
-          type="button"
-          className="border-2 border-[#FFD000] px-4 py-2 mt-8 rounded-2xl hover:bg-[#FFD000] hover:text-white"
-          onClick={() => router.push(pathname.endsWith("/") ? pathname + "faq" : pathname + "/faq")}
-        >
+        <Link href="/faq" type="button" className="border-2 border-[#FFD000] px-4 py-2 mt-8 rounded-2xl hover:bg-[#FFD000] hover:text-white">
           FAQs
-        </button>
+        </Link>
       </div>
     </section>
   );

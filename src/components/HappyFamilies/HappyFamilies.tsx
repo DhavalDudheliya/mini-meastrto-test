@@ -44,7 +44,7 @@ const HappyFamilies = () => {
       {/* Continuous Scrolling Testimonials */}
       <div className="relative w-full overflow-hidden">
         <div className="flex animate-marquee space-x-6">
-          {[...testimonials, ...testimonials].map((testimonial, idx) => (
+          {[...testimonials, ...testimonials, ...testimonials, ...testimonials].map((testimonial, idx) => (
             <div key={idx} className="w-[300px] sm:w-[350px] md:w-[400px] lg:w-[500px] bg-white rounded-2xl shadow-md p-6 flex-shrink-0 m-4">
               {/* Avatar & Name */}
               <div className="flex items-center mb-4">
@@ -59,6 +59,9 @@ const HappyFamilies = () => {
             </div>
           ))}
         </div>
+        {/* Overlay Effects */}
+        <div className="pointer-events-none absolute top-0 left-0 h-full w-8 md:w-16 bg-gradient-to-r from-[#eefbfc] to-transparent" />
+        <div className="pointer-events-none absolute top-0 right-0 h-full w-8 md:w-16 bg-gradient-to-l from-[#eefbfc] to-transparent" />
       </div>
     </section>
   );
