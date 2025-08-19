@@ -26,7 +26,7 @@ const page = ({ params }: { params: any }) => {
   const t = useTranslations();
 
   return (
-    <div className="index-section px-4 flex items-center justify-center h-screen">
+    <div className="px-4 mb-10 flex items-center justify-center min-h-screen mt-[80px] md:mt-[100px]">
       <div className="container">
         <div className="flex flex-wrap items-center flex-col-reverse gap-[30px] md:flex-nowrap md:gap-0 md:flex-row">
           <div className="w-full md:w-[40%] xl:w-1/2">

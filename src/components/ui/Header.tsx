@@ -222,8 +222,8 @@ const Header = ({ showUser }: HeaderProp) => {
                 </div>
               </div>
             ) : (
-              <Link href="/login" className="header-btn md:flex btn-pill pink small-btn">
-                Sign in
+              <Link href="/login" className="header-btn md:flex btn-pill pink small-btn hover:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+                {t("sign_in")}
               </Link>
             )}
             <div className="relative inline-block flex-shrink-0">

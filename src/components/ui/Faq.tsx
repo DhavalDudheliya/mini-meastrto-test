@@ -18,7 +18,7 @@ const Faq = () => {
         <p className="mt-2 text-lg">{t("answers_to_what_everyones_asking")}</p>
         <button
           type="button"
-          className="border-2 border-[#FFD000] px-4 py-2 mt-8 rounded-2xl"
+          className="border-2 border-[#FFD000] px-4 py-2 mt-8 rounded-2xl hover:bg-[#FFD000] hover:text-white"
           onClick={() => router.push(pathname.endsWith("/") ? pathname + "faq" : pathname + "/faq")}
         >
           FAQs

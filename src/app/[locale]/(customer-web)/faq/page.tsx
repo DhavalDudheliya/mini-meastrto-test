@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type FAQItem = {
   question: string;
@@ -36,8 +36,31 @@ type Locale = "en" | "sv";
 
 const FAQPage = ({ params }: { params: { locale: Locale } }) => {
   const locale: Locale = params.locale;
-  const [openCategory, setOpenCategory] = useState<number | null>(null);
+
+  // State
+  const [openCategory, setOpenCategory] = useState<number[]>([]);
   const [openQuestion, setOpenQuestion] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  // Ensure client-only rendering (prevents hydration mismatch)
+  useEffect(() => {
+    setMounted(true);
+    // Open all categories by default AFTER mount
+    setOpenCategory(faqData.map((_, idx) => idx));
+  }, []);
+
+  if (!mounted) {
+    // --- Skeleton while hydrating ---
+    return (
+      <main className="max-w-5xl mx-auto px-4 py-10 mt-[60px] md:mt-[80px] animate-pulse">
+        <h1 className="text-3xl font-bold text-center mb-8">FAQ</h1>
+
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className="rounded-xl p-4 mb-4 shadow bg-gray-200 h-[120px]" />
+        ))}
+      </main>
+    );
+  }
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-10 mt-[60px] md:mt-[80px]">
@@ -70,11 +93,16 @@ const FAQPage = ({ params }: { params: { locale: Locale } }) => {
           className={`rounded-xl p-4 mb-4 cursor-pointer shadow-[0_4px_4px_rgba(0,0,0,0.25)] transition-all duration-300 ${cat.bgColor} border border-neutral-200`}
         >
           {/* Category Accordion */}
-          <div className="flex justify-between items-center" onClick={() => setOpenCategory(openCategory === catIndex ? null : catIndex)}>
+          <div
+            className="flex justify-between items-center"
+            onClick={() => {
+              setOpenCategory((prev) => (prev.includes(catIndex) ? prev.filter((idx) => idx !== catIndex) : [...prev, catIndex]));
+            }}
+          >
             <h2 className="font-bold lg:text-[32px] md:text-[28px] text-[24px]">{cat.title[locale]}</h2>
             <Image
-              src={openCategory === catIndex ? "/images/faq_minus.svg" : "/images/faq_plus.svg"}
-              alt={openCategory === catIndex ? "Collapse" : "Expand"}
+              src={openCategory.includes(catIndex) ? "/images/faq_minus.svg" : "/images/faq_plus.svg"}
+              alt={openCategory.includes(catIndex) ? "Collapse" : "Expand"}
               className="w-[25px] h-[25px] sm:w-[30px] sm:h-[30px]"
               width={50}
               height={50}
@@ -82,7 +110,7 @@ const FAQPage = ({ params }: { params: { locale: Locale } }) => {
           </div>
 
           {/* Questions */}
-          {openCategory === catIndex && (
+          {openCategory.includes(catIndex) && (
             <div className="mt-3 space-y-2">
               {cat.items[locale].map((faq, index) => (
                 <div
@@ -102,7 +130,7 @@ const FAQPage = ({ params }: { params: { locale: Locale } }) => {
                       />
                     </div>
                     <div
-                      className={`transition-max-height duration-300 ease-in-out overflow-hidden  ${
+                      className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
                         openQuestion === faq.question ? "max-h-[500px]" : "max-h-0"
                       }`}
                     >

@@ -41,6 +41,7 @@ body {
   --pink-400: #f27ab5;
   --pink-500: #fd44ac;
   --pink-600: #ff25a0;
+  --pink-700: #ff0084;
 
 
   --blue-100: #ebf9fe;
@@ -50,6 +51,18 @@ body {
   --blue-500: #5ad6fc;
   --blue-600: #00c3ff;
 }
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
 
 /* swiper arrow css */
 
@@ -463,7 +476,7 @@ li.pagination-item.active.disabled a{
   border-radius: 20px;
   text-align: center;
   height: auto;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 .btn-pill2 {
   cursor: pointer;
@@ -475,7 +488,7 @@ li.pagination-item.active.disabled a{
   border-radius: 20px;
   text-align: center;
   height: auto;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .btn-pill.outline-transparent {
@@ -500,6 +513,7 @@ li.pagination-item.active.disabled a{
 
 .btn-pill.pink:hover {
   background-color: var(--pink-600);
+  color: #fff;
 }
 
 .btn-pill.yellow {

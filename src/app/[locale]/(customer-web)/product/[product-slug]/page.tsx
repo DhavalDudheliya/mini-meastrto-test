@@ -1,4 +1,5 @@
 import MainProduct from "@/components/MainProduct/MainProduct";
+import Faq from "@/components/ui/Faq";
 import React from "react";
 
 export async function generateStaticParams({ params }: { params: { locale: string } }) {
@@ -50,7 +51,14 @@ export async function generateMetadata({ params }: { params: { "product-slug": s
 const page = async ({ params }: { params: { "product-slug": string } }) => {
   const productSlug = params["product-slug"];
 
-  return <MainProduct slug={productSlug} />;
+  return (
+    <>
+      <MainProduct slug={productSlug} />
+      <div className="border-t border-black">
+        <Faq />
+      </div>
+    </>
+  );
 };
 
 export default page;

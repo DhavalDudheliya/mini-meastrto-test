@@ -36,9 +36,6 @@ const Footer = () => {
                 <Link href="/contact-us" className="footer-nav-link text-[var(--orange)]">
                   {t("contact_us")}
                 </Link>
-                <Link href="/contact-us" className="footer-nav-link text-[var(--orange)]">
-                  {t("contact_us")}
-                </Link>
                 <Link href="/faq" className="footer-nav-link text-[var(--orange)]">
                   {t("faq")}
                 </Link>
@@ -82,6 +79,9 @@ const Footer = () => {
                 </NextLink>
                 <NextLink target="blank" href={"https://www.instagram.com/mini.maestro.moments/"}>
                   <Image alt=" " src="/images/insta.svg" width={24} height={24} className="w-[24px] h-[24px]" />
+                </NextLink>
+                <NextLink target="blank" href={"https://www.facebook.com/share/163VnnFzzA/"}>
+                  <Image alt=" " src="/images/facebook.svg" width={24} height={24} className="w-[24px] h-[24px]" />
                 </NextLink>
               </div>
             </div>

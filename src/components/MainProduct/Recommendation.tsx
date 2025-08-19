@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import RecommendationCard from "./RecommendationCard";
 import { Pagination } from "swiper/modules";
@@ -7,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Product } from "@/lib/features/product/types";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const Recommendation = ({ product }: { product: Product[] }) => {
 
@@ -46,8 +46,14 @@ const Recommendation = ({ product }: { product: Product[] }) => {
                 className="items-stretch"
               >
                 {product.map((data, i) => (
-                  <SwiperSlide key={i} className="p-3 rounded-[16px] border-[1px] border-[#FF77C3] sm:rounded-[30px] md:p-[14px]">
+                  <SwiperSlide key={i} className="p-3 rounded-[16px] border-[1px] border-[#FF77C3] sm:rounded-[30px] md:p-[14px] relative">
                     <RecommendationCard slug={data.slug[local]} main_image={data.main_image} name={data.name[local]} price={data.price} />
+                    <Link
+                      href={{ pathname: "/product/[product-slug]", params: { "product-slug": data.slug[local] } }}
+                      className="btn-pill2 yellow absolute -bottom-[24px] left-1/2 -translate-x-1/2 hover:translate-y-[-2px] transition-transform duration-400"
+                    >
+                      {t("view")}
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>

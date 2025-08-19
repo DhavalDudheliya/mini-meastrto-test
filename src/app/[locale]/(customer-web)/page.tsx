@@ -1,5 +1,4 @@
 import Hero from "../../../components/ui/Hero";
-import SEO from "../../../components/ui/SEO";
 import OurProducts from "../../../components/OurProducts/OurProducts";
 import HowItWorkX from "../../../components/HowItWork/Horizontal/HowItWorkX";
 import { useTranslations } from "next-intl";

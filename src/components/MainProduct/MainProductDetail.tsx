@@ -267,10 +267,6 @@ const MainProductDetail = ({
                       <h5 className="product-p font-bold">{t("price")}: </h5>
                       <h5
                         className="font-normal product-p"
-                        style={{
-                          fontWeight: "300",
-                          fontFamily: "Bariol Regular",
-                        }}
                       >
                         {data[0].is_photo_book ? (basePrice + calculatedPrice).toFixed(2) : basePrice.toFixed(2)} SEK
                       </h5>
@@ -352,7 +348,9 @@ const MainProductDetail = ({
         <p>Loading...</p>
       )}
 
-      <Faq />
+      {/* <div className="w-full border-t border-black">
+        <Faq />
+      </div> */}
     </>
   );
 };
