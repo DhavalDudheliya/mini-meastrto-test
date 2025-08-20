@@ -51,7 +51,7 @@ const Sidebar = () => {
           ))}
             <div className="px-4 py-3 xl:px-5 xl:py-4">
             <a
-              href="https://elegant-feast-203fc5fa91.strapiapp.com/admin"
+              href="https://acceptable-cow-c2fcc90057.strapiapp.com/admin"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3"

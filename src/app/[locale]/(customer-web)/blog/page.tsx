@@ -10,7 +10,7 @@ import axios from "axios";
 import qs from "qs";
 import Image from "next/image";
 
-const API_URL = "https://elegant-feast-203fc5fa91.strapiapp.com/api";
+const API_URL = "https://acceptable-cow-c2fcc90057.strapiapp.com/api";
 
 const BlogPage = ({params}: {params: any}) => {
   const locale = params.locale;

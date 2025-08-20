@@ -34,7 +34,7 @@ const ProductHero = () => {
         <div className="container relative z-[99] h-full">
           <div className="h-full">
             <div className="h-full overflow-hidden flex items-center justify-center">
-              <div className="flex gap-3 flex-wrap items-center md:flex-nowrap pb-3 md:items-center pt-[80px] justify-center md:justify-center min-h-screen md:h-screen">
+              <div className="flex gap-12 flex-wrap items-center md:flex-nowrap pb-3 md:items-center pt-[80px] justify-center md:justify-center h-full md:h-screen">
                 <div className="flex flex-col gap-4 w-full items-center text-center md:w-1/2 md:text-left md:items-start 2xl:w-2/4 ">
                   <h1 className="max-w-[648px] text-[32px] md:text-[48px] lg:text-[64px] font-bold">{t("your_childs_art_forever_preserved")}</h1>
                   <p className="sm:text-[20px] md:[text-22px] lg:text-[24px] xl:text-[26px]">{t("product_page_hero_description")}</p>

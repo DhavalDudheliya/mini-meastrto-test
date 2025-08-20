@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Head from "next/head";
 
-const HowItWorkX = ({ heading, locale }: { heading: string; locale: string }) => {
+const HowItWorkX = ({ locale }: { locale: string }) => {
   unstable_setRequestLocale(locale);
   const t = useTranslations();
 
@@ -39,7 +39,7 @@ const HowItWorkX = ({ heading, locale }: { heading: string; locale: string }) =>
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: heading,
+    name: t("how_it_works"),
     step: howItWork.map((card, i) => ({
       "@type": "HowToStep",
       position: i + 1,
@@ -61,12 +61,12 @@ const HowItWorkX = ({ heading, locale }: { heading: string; locale: string }) =>
           {/* Heading */}
           <div className="flex justify-center w-full">
             <div className="relative flex flex-col items-center">
-              <h2 className="text-4xl md:text-6xl font-bold text-center">{heading}</h2>
+              <h2 className="text-4xl md:text-6xl font-bold text-center">{t("how_it_works")}</h2>
             </div>
           </div>
 
           {/* Steps list */}
-          <ol className="flex flex-wrap flex-col justify-center md:flex-row gap-4 list-none" aria-label={`${heading} steps`}>
+          <ol className="flex flex-wrap flex-col justify-center md:flex-row gap-4 list-none" aria-label={`${t("how_it_works")} steps`}>
             {howItWork.map((card, index) => (
               <HowItWorksCard key={index} img={card.img} alt={card.alt} title={card.title} description={card.desc} step={index + 1} />
             ))}

@@ -7,7 +7,7 @@ import qs from "qs";
 import BlogPageDetail from "./BlogPageDetail";
 import Seo from "../Seo";
 
-const API_URL = "https://elegant-feast-203fc5fa91.strapiapp.com/api";
+const API_URL = "https://acceptable-cow-c2fcc90057.strapiapp.com/api";
 
 const BlogPage = () => {
   const params = useParams();

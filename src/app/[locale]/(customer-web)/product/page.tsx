@@ -1,17 +1,25 @@
 import React from "react";
-import Hero from "../../../../components/ui/Hero";
 import AboutOurProduct from "../../../../components/AboutOurProduct/AboutOurProduct";
-import HowItWorkVertical from "../../../../components/HowItWork/Vertical/HowItWorkVertical";
 import ProductHero from "@/components/ui/ProductHero";
 import Faq from "@/components/ui/Faq";
+import HowItWorkX from "@/components/HowItWork/Horizontal/HowItWorkX";
+import { useTranslations } from "next-intl";
 
-const page = async () => {
+const page = async ({ params }: { params: any }) => {
+  const locale = params.locale;
   return (
     <>
       <ProductHero />
-      <AboutOurProduct />
-      <HowItWorkVertical />
-      <Faq />
+      <div className="border-t border-black">
+        <AboutOurProduct />
+      </div>
+      <div className="border-t border-black">
+        {/* <HowItWorkVertical /> */}
+        <HowItWorkX locale={locale} />
+      </div>
+      <div className="border-t border-black">
+        <Faq />
+      </div>
     </>
   );
 };

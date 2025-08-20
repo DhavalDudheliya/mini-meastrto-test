@@ -27,8 +27,8 @@ export default function Home({ params }: { params: any }) {
     <>
       <Hero />
       <OurProducts heading={t("our_product")} query={`?category=${photoBook[locale]}`} />
-      <HowItWorkX locale={params.locale} heading={t("how_it_works")} />
-      <HappyFamilies />
+      <HowItWorkX locale={params.locale} />
+      <HappyFamilies locale={params.locale} />
       <OrderYouBook locale={params.locale} />
       <Faq />
     </>

@@ -16,15 +16,9 @@ import { useAddToCartMutation } from "@/lib/features/cart/cart.api";
 import toast from "react-hot-toast";
 import { useLocale, useTranslations } from "next-intl";
 import { Truck } from "lucide-react";
-import Faq from "../ui/Faq";
 
-const MainProductDetail = ({
-  data,
-  isLoadingProduct,
-}: {
-  isLoadingProduct: boolean;
-  data: Product[];
-}) => {
+const MainProductDetail = ({ data, isLoadingProduct }: { isLoadingProduct: boolean; data: Product[] }) => {
+  console.log("🚀 ~ data-->", data);
   const t = useTranslations();
 
   const locale = useLocale();
@@ -39,9 +33,7 @@ const MainProductDetail = ({
 
   const [selectedFrame, setSelectedFrame] = useState<Product | null>(null);
 
-  const [selectedVariant, setSelectedVariant] = useState<Product | null>(
-    data[0]
-  );
+  const [selectedVariant, setSelectedVariant] = useState<Product | null>(data[0]);
 
   const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setRangeValue(Number(e.target.value));
@@ -54,9 +46,7 @@ const MainProductDetail = ({
     isSuccess,
     data: recProducts,
   } = useGetProductsQuery({
-    query: `?category=${data[0].category
-      .map((cat) => cat.name[locale])
-      .join(",")}`,
+    query: `?category=${data[0].category.map((cat) => cat.name[locale]).join(",")}`,
   });
 
   // Assuming data[0].price is the base price for 24 photos.
@@ -235,7 +225,7 @@ const MainProductDetail = ({
                         <div
                           className="text-[16px] xl:text-[18px] 2xl:text-[22px] flex flex-col gap-1"
                           dangerouslySetInnerHTML={{
-                            __html: data[0].description[locale],
+                            __html: selectedVariant?.description[locale] ?? "",
                           }} // Render HTML content
                         />
                       </div>
@@ -265,9 +255,7 @@ const MainProductDetail = ({
 
                     <div className="flex flex-row gap-1 items-end">
                       <h5 className="product-p font-bold">{t("price")}: </h5>
-                      <h5
-                        className="font-normal product-p"
-                      >
+                      <h5 className="font-normal product-p">
                         {data[0].is_photo_book ? (basePrice + calculatedPrice).toFixed(2) : basePrice.toFixed(2)} SEK
                       </h5>
                     </div>

@@ -4,33 +4,45 @@ import React from "react";
 
 interface Testimonial {
   name: string;
-  text: string;
+  text: {
+    en: string;
+    sv: string;
+  },
   image: string;
   alt: string;
 }
 
 const testimonials: Testimonial[] = [
   {
-    name: "Josefin Svensson",
-    text: "The Photo book turned out amazing! My daughter's drawings look so professional and the quality is outstanding.",
-    image: "/images/josefin.jpg",
-    alt: "Josefin Svensson",
+    name: "Josefin",
+    text: {
+      en: "A fantastic and easy way to save our son’s drawings.",
+      sv: "Fantastisk och enkelt sätt att spara vår sons teckningar på.",
+    },
+    image: "/images/Josefin.jpeg",
+    alt: "Josefin",
   },
   {
-    name: "Calle B",
-    text: "Perfect gift for grandparents! They absolutely loved the canvas print of their grandson’s artwork.",
-    image: "/images/calle.jpg",
+    name: "Evelina",
+    text: {
+      en: "My son loves drawing and painting. He picks his favorite ones, and we save them in a photo book for each year and different themes.",
+      sv: "Min son älskar att rita och måla. Han väljer ut sina favorit teckningar som vi sedan sparar som en fotobok för olika år och i olika teman.",
+    },
+    image: "/images/Evelina.jpeg",
     alt: "Calle B",
   },
   {
-    name: "Evelina L.",
-    text: "Fast delivery and excellent customer service. The whole process was so easy and fun.",
-    image: "/images/evelina.jpg",
-    alt: "Evelina L.",
+    name: "Calle",
+    text: {
+      en: "Super easy way to save drawings. We sent in Olivia’s artwork and got a book. Perfect!",
+      sv: "Supersmidigt sätt att spara teckningar på, vi skickade in Olivias teckningar och fick tillbaka en bok. Perfekt!"
+    },
+    image: "/images/Calle.png",
+    alt: "Evelina",
   },
 ];
 
-const HappyFamilies = () => {
+const HappyFamilies = ({ locale }: {locale: string}) => {
   const t = useTranslations();
 
   return (
@@ -55,7 +67,7 @@ const HappyFamilies = () => {
                 </div>
               </div>
               {/* Text */}
-              <p className="text-gray-700 leading-relaxed">“{testimonial.text}”</p>
+              <p className="text-gray-700 leading-relaxed">“{locale === "en" ? testimonial.text.en : testimonial.text.sv}”</p>
             </div>
           ))}
         </div>
