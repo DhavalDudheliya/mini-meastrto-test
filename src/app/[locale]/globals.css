@@ -523,7 +523,7 @@ li.pagination-item.active.disabled a{
 }
 
 .btn-pill.yellow:hover {
-  color: #000;
+  color: #fff;
   background-color: #FBC700;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-2px);
@@ -536,7 +536,7 @@ li.pagination-item.active.disabled a{
 }
 
 .btn-pill2.yellow:hover {
-  color: #000;
+  color: #fff;
   background-color: #FBC700;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }

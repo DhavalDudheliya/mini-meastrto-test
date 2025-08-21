@@ -18,7 +18,7 @@ const OurProductCard = ({ name, slug, bullet_points, is_photo_book, is_wall_pain
 
   return (
     <article
-      className={`flex max-w-[500px] rounded-[16px] ${
+      className={`flex max-w-[500px] lg:min-h-[650px] rounded-[16px] ${
         isEven ? "bg-[#FFFAE5]" : "bg-[#EFFBFC]"
       } sm:rounded-[30px] pb-16 px-3 md:px-16 relative shadow-[0_4px_4px_rgba(0,0,0,0.25)]`}
       aria-label={typeof name[locale] === "string" ? name[locale] : String(name[locale])}
