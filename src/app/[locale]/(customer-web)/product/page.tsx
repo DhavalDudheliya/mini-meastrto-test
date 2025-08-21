@@ -10,16 +10,10 @@ const page = async ({ params }: { params: any }) => {
   return (
     <>
       <ProductHero />
-      <div className="border-t border-black">
-        <AboutOurProduct />
-      </div>
-      <div className="border-t border-black">
-        {/* <HowItWorkVertical /> */}
-        <HowItWorkX locale={locale} />
-      </div>
-      <div className="border-t border-black">
-        <Faq />
-      </div>
+      <AboutOurProduct />
+      {/* <HowItWorkVertical /> */}
+      <HowItWorkX locale={locale} />
+      <Faq />
     </>
   );
 };

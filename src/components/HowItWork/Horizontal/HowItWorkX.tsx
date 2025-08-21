@@ -56,7 +56,7 @@ const HowItWorkX = ({ locale }: { locale: string }) => {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Head>
 
-      <div className="relative bg-[#fffffc] px-[16px] p-4 lg:px-5 lg:pt-[30px] xl:pb-[5%] 2xl:px-[123px]">
+      <div className="relative bg-[#fffdf4] px-[16px] p-4 lg:px-5 lg:pt-[30px] xl:pb-[5%] 2xl:px-[123px]">
         <div className="flex flex-col gap-[30px] lg:gap-[50px]">
           {/* Heading */}
           <div className="flex justify-center w-full">

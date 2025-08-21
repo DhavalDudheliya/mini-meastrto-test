@@ -30,7 +30,7 @@ const ProductHero = () => {
 
   return (
     <>
-      <div className="flex flex-col relative bg-white px-4 min-h-screen md:h-screen ">
+      <div className="flex flex-col relative bg-[#fffdf4] px-4 min-h-screen md:h-screen ">
         <div className="container relative z-[99] h-full">
           <div className="h-full">
             <div className="h-full overflow-hidden flex items-center justify-center">

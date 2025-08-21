@@ -115,7 +115,7 @@ const FAQPage = ({ params }: { params: { locale: Locale } }) => {
               {cat.items[locale].map((faq, index) => (
                 <div
                   key={index}
-                  className="px-3 py-4 lg:px-5 lg:py-4 xl:px-6 xl:py-[16px] rounded-[16px] lg:rounded-[20px] bg-white cursor-pointer transition-all duration-300 shadow-[0_1px_1px_rgba(0,0,0,0.25)] border border-neutral-200"
+                  className="px-3 py-4 lg:px-5 lg:py-4 xl:px-6 xl:py-[16px] rounded-[16px] lg:rounded-[20px] bg-white hover:bg-[var(--light-gray)] cursor-pointer transition-all duration-300 shadow-[0_1px_1px_rgba(0,0,0,0.25)] border border-neutral-200"
                   onClick={() => setOpenQuestion(openQuestion === faq.question ? null : faq.question)}
                 >
                   <div className="flex flex-col">

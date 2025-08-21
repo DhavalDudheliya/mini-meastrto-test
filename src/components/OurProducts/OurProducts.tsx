@@ -98,7 +98,13 @@ const OurProducts = ({ heading, query }: { heading: string; query: string }) => 
                 </div>
               </header>
               <div>
-                <div className="flex flex-wrap justify-center gap-12 md:gap-14 lg:gap-16" role="list">
+                <div className="flex flex-wrap justify-center gap-12 md:gap-14 lg:gap-16 relative" role="list">
+                  <div className="absolute -top-10 -left-8 mx-4">
+                    <Image src="/images/pd1.svg" alt="circles" width={100} height={100} className="w-16 h-16" />
+                  </div>
+                  <div className="absolute -bottom-10 right-8">
+                    <Image src="/images/pd2.svg" alt="circles" width={100} height={100} className="w-16 h-16" />
+                  </div>
                   {product && product.length
                     ? [
                         {
@@ -106,7 +112,11 @@ const OurProducts = ({ heading, query }: { heading: string; query: string }) => 
                           src: "/images/photo_book_featuring_child's_artwork.png",
                           bullet_points: {
                             en: ["Professionally photographed & edited drawings", "Fits 24 drawings or more", "Printed as a 20×20 cm hardcover book"],
-                            sv: ["Printed as a 20×20 cm hardcover book", "Plats för 24 teckningar, eller fler", "Inbunden bok i 20×20 cm"],
+                            sv: [
+                              "Teckningarna fotograferas och redigeras professionellt",
+                              "Plats för 24 teckningar, eller fler",
+                              "Inbunden bok i 20×20 cm",
+                            ],
                           },
                           alt: "Photo book featuring child's artwork",
                         },
@@ -128,7 +138,7 @@ const OurProducts = ({ heading, query }: { heading: string; query: string }) => 
                           alt: "Mini Maestro framed wall art",
                         },
                       ].map((card, index) => (
-                        <article key={index} aria-label={card.name?.en || String(card.name)} role="listitem">
+                        <article className="h-full" key={index} aria-label={card.name?.en || String(card.name)} role="listitem">
                           <OurProductCard {...card} index={index} />
                         </article>
                       ))

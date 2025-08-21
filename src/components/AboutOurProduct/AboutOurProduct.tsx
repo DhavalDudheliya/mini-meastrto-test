@@ -47,13 +47,23 @@ const AboutOurProduct = () => {
         </div>
         <div className="mt-[30px] sm:mt-[40px] lg:mt-[55px] flex flex-col gap-16 max-w-[1500px] mx-auto py-10">
           {products.map((product, index) => (
-            <div className={`flex px-6 md:px-0 flex-col ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+            <div className={`flex px-6 md:px-0 flex-col relative ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+              {index === 0 && (
+                <div className="absolute -bottom-8 right-[20%] z-10">
+                  <Image src="/images/pd4.svg" alt="circles" width={100} height={100} className="w-16 h-16" />
+                </div>
+              )}
+              {index === 1 && (
+                <div className="absolute bottom-[1px] left-2">
+                  <Image src="/images/pd3.svg" alt="circles" width={100} height={100} className="w-12 h-12" />
+                </div>
+              )}
               <div
                 key={index}
                 id={product.slug[local]}
                 className={`flex flex-col md:flex-row ${
-                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
-                } items-center justify-center px-6 pb-10 md:p-10 bg-[#FFF9E6] w-full md:w-[90%] lg:w-[80%] xl:w-[70%] rounded-[20px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]`}
+                  index % 2 !== 0 ? "md:flex-row-reverse bg-[#effafb]" : "bg-[#FFF9E6]"
+                } items-center justify-center px-6 pb-10 md:p-16 bg-[#FFF9E6] w-full md:w-[90%] lg:w-[80%] xl:w-[70%] rounded-[20px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]`}
               >
                 {/* Image Section */}
                 <div className="flex justify-center items-center w-full md:w-[50%] p-4">
