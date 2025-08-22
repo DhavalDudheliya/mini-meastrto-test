@@ -26,6 +26,8 @@ const Header = ({ showUser }: HeaderProp) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+    // Ref for sidebar
+    const sidebarRef = React.useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -48,6 +50,22 @@ const Header = ({ showUser }: HeaderProp) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+    // Close sidebar when clicking outside in mobile
+    useEffect(() => {
+      if (!menuOpen) return;
+      const handleClickOutside = (event: MouseEvent) => {
+        if (
+          sidebarRef.current &&
+          !sidebarRef.current.contains(event.target as Node)
+        ) {
+          setMenuOpen(false);
+        }
+      };
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [menuOpen]);
 
   const locale = useLocale();
 
@@ -117,11 +135,12 @@ const Header = ({ showUser }: HeaderProp) => {
             </Link>
           </div>
           <div className="header-nav">
-            <div
-              className={`fixed border-r-2 border-r-[var(--light-gray-200)] top-[53.31px] z-[999] left-0 w-[230px] h-[calc(100vh_-_45.31px)] bg-[var(--mid-gray)]  md:border-r-0 p-4 md:relative md:flex-row md:h-auto md:w-max md:left-0 md:top-0 md:bg-transparent transform ${
-                menuOpen ? "translate-x-0" : "-translate-x-full"
-              } transition-transform duration-300 ease-in-out md:translate-x-0 md:transition-none`}
-            >
+              <div
+                ref={sidebarRef}
+                className={`fixed border-r-2 border-r-[var(--light-gray-200)] top-[53.31px] z-[999] left-0 w-[230px] h-[calc(100vh_-_45.31px)] bg-[#fffffc]  md:border-r-0 p-4 md:relative md:flex-row md:h-auto md:w-max md:left-0 md:top-0 md:bg-transparent transform ${
+                  menuOpen ? "translate-x-0" : "-translate-x-full"
+                } transition-transform duration-300 ease-in-out md:translate-x-0 md:transition-none`}
+              >
               <div className="h-full flex flex-col gap-4 justify-between">
                 <div className="flex-col flex gap-[20px] lg:gap-5 2xl:gap-[30px] md:flex-row">
                   {headerNavLinks.map((link, index) => (

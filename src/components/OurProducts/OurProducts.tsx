@@ -99,10 +99,10 @@ const OurProducts = ({ heading, query }: { heading: string; query: string }) => 
               </header>
               <div>
                 <div className="flex flex-wrap justify-center gap-12 md:gap-14 lg:gap-16 relative" role="list">
-                  <div className="absolute -top-10 -left-8 mx-4">
+                  <div className="absolute hidden md:block md:-top-10 md:-left-8 mx-4">
                     <Image src="/images/pd1.svg" alt="circles" width={100} height={100} className="w-16 h-16" />
                   </div>
-                  <div className="absolute -bottom-10 right-8">
+                  <div className="absolute hidden md:block md:-bottom-10 md:right-8">
                     <Image src="/images/pd2.svg" alt="circles" width={100} height={100} className="w-16 h-16" />
                   </div>
                   {product && product.length

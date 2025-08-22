@@ -66,7 +66,7 @@ const HowItWorkX = ({ locale }: { locale: string }) => {
           </div>
 
           {/* Steps list */}
-          <ol className="flex flex-wrap flex-col justify-center md:flex-row gap-4 list-none" aria-label={`${t("how_it_works")} steps`}>
+          <ol className="flex flex-wrap flex-col items-center md:items-stretch justify-center md:flex-row gap-4 list-none" aria-label={`${t("how_it_works")} steps`}>
             {howItWork.map((card, index) => (
               <HowItWorksCard key={index} img={card.img} alt={card.alt} title={card.title} description={card.desc} step={index + 1} />
             ))}

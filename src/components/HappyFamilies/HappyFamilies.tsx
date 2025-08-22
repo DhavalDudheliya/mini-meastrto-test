@@ -46,13 +46,16 @@ const HappyFamilies = ({ locale }: {locale: string}) => {
   const t = useTranslations();
 
   return (
-    <section className="bg-[#5AD6FC1A] rounded-3xl p-6 md:p-10 mx-4 my-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] overflow-hidden">
+    <section className="bg-[#5AD6FC1A] rounded-3xl p-6 md:p-10 mx-4 my-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] overflow-hidden relative">
       {/* Heading */}
       <div className="flex flex-col items-center text-center mb-10">
         <h2 className="text-3xl md:text-6xl font-bold">{t("happy_families")}</h2>
         <p className="mt-2 text-lg">{t("what_parents_are_saying_about_mini_maestro")}</p>
       </div>
 
+      <div className="absolute hidden md:block md:top-10 md:right-12 lg:right-24 mx-4">
+        <Image src="/images/pd1.svg" alt="circles" width={100} height={100} className="w-16 h-16" />
+      </div>
       {/* Continuous Scrolling Testimonials */}
       <div className="relative w-full overflow-hidden">
         <div className="flex animate-marquee space-x-6">
