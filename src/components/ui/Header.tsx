@@ -137,11 +137,11 @@ const Header = ({ showUser }: HeaderProp) => {
           <div className="header-nav">
               <div
                 ref={sidebarRef}
-                className={`fixed border-r-2 border-r-[var(--light-gray-200)] top-[53.31px] z-[999] left-0 w-[230px] h-[calc(100vh_-_45.31px)] bg-[#fffffc]  md:border-r-0 p-4 md:relative md:flex-row md:h-auto md:w-max md:left-0 md:top-0 md:bg-transparent transform ${
+                className={`fixed border-r-2 border-r-[var(--light-gray-200)] top-[56px] z-[999] left-0 w-[230px] h-[calc(100vh-56px)] bg-[#fffffc]  md:border-r-0 p-4 md:relative md:flex-row md:h-auto md:w-max md:left-0 md:top-0 md:bg-transparent transform ${
                   menuOpen ? "translate-x-0" : "-translate-x-full"
                 } transition-transform duration-300 ease-in-out md:translate-x-0 md:transition-none`}
               >
-              <div className="h-full flex flex-col gap-4 justify-between">
+              <div className="h-full flex flex-col gap-4">
                 <div className="flex-col flex gap-[20px] lg:gap-5 2xl:gap-[30px] md:flex-row">
                   {headerNavLinks.map((link, index) => (
                     <div key={index} className="relative group">
@@ -191,8 +191,8 @@ const Header = ({ showUser }: HeaderProp) => {
                     </div>
                   ))}
                 </div>
-                <Link href="/login" className="flex md:hidden justify-center btn-pill pink">
-                  Sign in
+                <Link href="/login" className="flex md:hidden justify-center btn-pill pink mt-4">
+                  {t("sign_in")}
                 </Link>
               </div>
             </div>
@@ -215,8 +215,8 @@ const Header = ({ showUser }: HeaderProp) => {
                   </div>
                   <Image src="/images/user_menu.svg" alt="user-menu" width={12} height={7} />
                 </div>
-                <div className="header-dropdown">
-                  <div className="flex flex-col">
+                <div className="header-dropdown min-w-[170px]">
+                  <div className="flex flex-col w-full">
                     <Link onClick={handleLogout} href={{ pathname: "/login" }} className="flex items-center gap-[6px] header-dropdown-menu">
                       <Image
                         src="/images/logout.svg"
